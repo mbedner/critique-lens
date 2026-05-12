@@ -3,7 +3,7 @@ import { AppSidebar } from "@/components/layout/app-sidebar";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
-    <SidebarProvider>
+    <SidebarProvider className="min-h-screen">
       <AppSidebar />
       <SidebarInset className="flex flex-col min-h-screen">
         {children}

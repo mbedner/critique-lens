@@ -3,6 +3,7 @@ import { LinkButton } from "@/components/ui/link-button";
 import { PageHeader } from "@/components/layout/page-header";
 import { ReviewerCard } from "@/components/reviewers/reviewer-card";
 import { EmptyState } from "@/components/shared/empty-state";
+import { PageShell } from "@/components/ui/motion";
 import type { Reviewer } from "@/types";
 
 async function getReviewers(): Promise<Reviewer[]> {
@@ -25,10 +26,10 @@ export default async function ReviewersPage() {
           </LinkButton>
         }
       />
-      <main className="flex-1 p-6">
+      <PageShell className="p-6">
         {reviewers.length === 0 ? (
           <EmptyState
-            icon={Users}
+            icon={<Users className="h-6 w-6 text-[var(--violet)]" />}
             title="No reviewers yet"
             description="Create reviewer profiles to start building personas from your critique history."
             action={
@@ -40,12 +41,12 @@ export default async function ReviewersPage() {
           />
         ) : (
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {reviewers.map((reviewer) => (
-              <ReviewerCard key={reviewer.id} reviewer={reviewer} />
+            {reviewers.map((reviewer, i) => (
+              <ReviewerCard key={reviewer.id} reviewer={reviewer} index={i} />
             ))}
           </div>
         )}
-      </main>
+      </PageShell>
     </>
   );
 }

@@ -162,7 +162,7 @@ export function ReviewerForm({ defaultValues, reviewerId }: ReviewerFormProps) {
                       <SelectItem value="junior">Junior</SelectItem>
                       <SelectItem value="mid">Mid</SelectItem>
                       <SelectItem value="senior">Senior</SelectItem>
-                      <SelectItem value="staff">Staff</SelectItem>
+                      <SelectItem value="manager">Manager</SelectItem>
                       <SelectItem value="director">Director</SelectItem>
                       <SelectItem value="vp">VP</SelectItem>
                       <SelectItem value="executive">Executive</SelectItem>

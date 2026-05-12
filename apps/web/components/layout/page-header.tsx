@@ -1,5 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import { Separator } from "@/components/ui/separator";
 
 interface PageHeaderProps {
   title: string;
@@ -9,17 +11,32 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, description, actions }: PageHeaderProps) {
   return (
-    <header className="flex h-14 shrink-0 items-center gap-3 border-b px-4">
-      <SidebarTrigger className="-ml-1" />
-      <Separator orientation="vertical" className="h-4" />
-      <div className="flex flex-1 items-center justify-between gap-4">
-        <div>
-          <h1 className="text-sm font-semibold">{title}</h1>
+    <header className="flex h-16 shrink-0 items-center gap-3 border-b bg-background/95 backdrop-blur-sm px-5 sticky top-0 z-10">
+      <SidebarTrigger className="-ml-1 text-muted-foreground hover:text-foreground transition-colors" />
+      <div className="flex flex-1 items-center justify-between gap-6 min-w-0">
+        <motion.div
+          initial={{ opacity: 0, y: -6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+          className="min-w-0"
+        >
+          <h1 className="text-[15px] font-semibold leading-none tracking-tight truncate">
+            {title}
+          </h1>
           {description && (
-            <p className="text-xs text-muted-foreground">{description}</p>
+            <p className="mt-1 text-xs text-muted-foreground truncate">{description}</p>
           )}
-        </div>
-        {actions && <div className="flex items-center gap-2">{actions}</div>}
+        </motion.div>
+        {actions && (
+          <motion.div
+            initial={{ opacity: 0, x: 8 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.35, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
+            className="flex items-center gap-2 shrink-0"
+          >
+            {actions}
+          </motion.div>
+        )}
       </div>
     </header>
   );

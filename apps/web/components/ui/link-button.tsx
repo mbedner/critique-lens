@@ -3,22 +3,23 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const linkButtonVariants = cva(
-  "inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50",
+  "inline-flex shrink-0 items-center justify-center rounded-full border border-transparent bg-clip-padding font-medium whitespace-nowrap transition-all duration-150 outline-none select-none focus-visible:ring-3 focus-visible:ring-ring/50 active:scale-[0.97]",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/80",
-        outline: "border-border bg-background hover:bg-muted hover:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-muted hover:text-foreground",
+        default:   "bg-primary text-primary-foreground shadow-sm hover:bg-primary/85 hover:shadow-md",
+        outline:   "border-border bg-background text-foreground hover:bg-muted",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/70",
+        ghost:     "hover:bg-muted hover:text-foreground",
         destructive: "bg-destructive/10 text-destructive hover:bg-destructive/20",
       },
       size: {
-        default: "h-8 gap-1.5 px-2.5",
-        sm: "h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem]",
-        lg: "h-9 gap-1.5 px-2.5",
-        xs: "h-6 gap-1 rounded-[min(var(--radius-md),10px)] px-2 text-xs",
-        icon: "size-8",
+        default: "h-9 gap-1.5 px-4 text-sm",
+        xs:      "h-7 gap-1 px-3 text-xs",
+        sm:      "h-8 gap-1.5 px-3.5 text-sm",
+        lg:      "h-10 gap-2 px-5 text-sm",
+        xl:      "h-12 gap-2 px-6 text-base",
+        icon:    "size-9",
       },
     },
     defaultVariants: { variant: "default", size: "default" },

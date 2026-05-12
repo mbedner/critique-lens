@@ -4,6 +4,7 @@ import { PageHeader } from "@/components/layout/page-header";
 import { CritiqueCard } from "@/components/critiques/critique-card";
 import { CritiqueSearch } from "@/components/critiques/critique-search";
 import { EmptyState } from "@/components/shared/empty-state";
+import { PageShell } from "@/components/ui/motion";
 import type { Critique } from "@/types";
 
 async function getCritiques(_query?: string): Promise<Critique[]> {
@@ -34,7 +35,7 @@ export default async function CritiquesPage({
           </div>
         }
       />
-      <main className="flex-1 p-6">
+      <PageShell className="p-6">
         {q && (
           <p className="mb-4 text-sm text-muted-foreground">
             Showing results for <span className="font-medium text-foreground">&ldquo;{q}&rdquo;</span>
@@ -42,7 +43,7 @@ export default async function CritiquesPage({
         )}
         {critiques.length === 0 ? (
           <EmptyState
-            icon={MessageSquare}
+            icon={<MessageSquare className="h-6 w-6 text-[var(--violet)]" />}
             title={q ? "No critiques found" : "No critiques yet"}
             description={
               q
@@ -60,12 +61,12 @@ export default async function CritiquesPage({
           />
         ) : (
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {critiques.map((critique) => (
-              <CritiqueCard key={critique.id} critique={critique} />
+            {critiques.map((critique, i) => (
+              <CritiqueCard key={critique.id} critique={critique} index={i} />
             ))}
           </div>
         )}
-      </main>
+      </PageShell>
     </>
   );
 }
