@@ -17,7 +17,7 @@ export default async function NewPreflightPage() {
         description="Analyze a frame against a reviewer persona before your review"
       />
       <main className="flex-1 p-6">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mx-auto">
           <PreflightForm reviewers={reviewers} projects={projects} pbis={pbis} />
         </div>
       </main>

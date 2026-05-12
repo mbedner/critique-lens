@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const linkButtonVariants = cva(
-  "inline-flex shrink-0 items-center justify-center rounded-full border border-transparent bg-clip-padding font-medium whitespace-nowrap transition-all duration-150 outline-none select-none focus-visible:ring-3 focus-visible:ring-ring/50 active:scale-[0.97]",
+  "inline-flex shrink-0 items-center justify-center rounded-md border border-transparent bg-clip-padding font-medium whitespace-nowrap transition-all duration-150 outline-none select-none focus-visible:ring-2 focus-visible:ring-ring/30 active:scale-[0.98]",
   {
     variants: {
       variant: {
@@ -15,10 +15,10 @@ const linkButtonVariants = cva(
       },
       size: {
         default: "h-9 gap-1.5 px-4 text-sm",
-        xs:      "h-7 gap-1 px-3 text-xs",
-        sm:      "h-8 gap-1.5 px-3.5 text-sm",
-        lg:      "h-10 gap-2 px-5 text-sm",
-        xl:      "h-12 gap-2 px-6 text-base",
+        xs:      "h-7 gap-1 px-2.5 text-xs",
+        sm:      "h-8 gap-1.5 px-3 text-sm",
+        lg:      "h-10 gap-2 px-5 text-[13px]",
+        xl:      "h-11 gap-2 px-6 text-sm",
         icon:    "size-9",
       },
     },

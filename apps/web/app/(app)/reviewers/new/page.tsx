@@ -9,7 +9,7 @@ export default function NewReviewerPage() {
         description="Create a reviewer profile to build a persona from critique history"
       />
       <main className="flex-1 p-6">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mx-auto">
           <ReviewerForm />
         </div>
       </main>

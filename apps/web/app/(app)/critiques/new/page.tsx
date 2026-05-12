@@ -17,7 +17,7 @@ export default async function NewCritiquePage() {
         description="Record a critique to build your review memory"
       />
       <main className="flex-1 p-6">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mx-auto">
           <CritiqueForm reviewers={reviewers} projects={projects} pbis={pbis} />
         </div>
       </main>

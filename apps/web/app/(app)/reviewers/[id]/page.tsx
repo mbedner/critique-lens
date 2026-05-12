@@ -17,7 +17,7 @@ export default async function ReviewerDetailPage({ params }: { params: Promise<{
     <>
       <PageHeader title={reviewer.name} description="Reviewer profile and persona" />
       <main className="flex-1 p-6">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto">
           <ReviewerDetail reviewer={reviewer} />
         </div>
       </main>

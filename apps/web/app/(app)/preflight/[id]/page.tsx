@@ -29,7 +29,7 @@ export default async function PreflightResultPage({ params }: { params: Promise<
         }
       />
       <main className="flex-1 p-6">
-        <div className="max-w-3xl space-y-4">
+        <div className="max-w-3xl mx-auto space-y-4">
           <Link
             href="/preflight"
             className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"

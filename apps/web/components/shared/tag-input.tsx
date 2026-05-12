@@ -38,7 +38,7 @@ export function TagInput({ value, onChange, placeholder = "Add tag…", classNam
   };
 
   return (
-    <div className={cn("flex flex-wrap gap-1.5 rounded-md border border-input bg-background p-2 focus-within:ring-1 focus-within:ring-ring", className)}>
+    <div className={cn("flex flex-wrap gap-1.5 rounded-lg border border-input bg-background p-2 transition-colors focus-within:border-ring/60", className)}>
       {value.map((tag) => (
         <Badge key={tag} variant="secondary" className="gap-1 pr-1 text-xs font-normal">
           {tag}

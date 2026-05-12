@@ -17,7 +17,7 @@ export default async function EditReviewerPage({ params }: { params: Promise<{ i
     <>
       <PageHeader title={`Edit ${reviewer.name}`} />
       <main className="flex-1 p-6">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mx-auto">
           <ReviewerForm defaultValues={reviewer} reviewerId={id} />
         </div>
       </main>

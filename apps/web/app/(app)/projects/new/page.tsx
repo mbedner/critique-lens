@@ -6,7 +6,7 @@ export default function NewProjectPage() {
     <>
       <PageHeader title="New Project" />
       <main className="flex-1 p-6">
-        <div className="max-w-xl">
+        <div className="max-w-xl mx-auto">
           <ProjectForm />
         </div>
       </main>
