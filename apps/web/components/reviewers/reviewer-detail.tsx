@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import { Pencil, Trash2, RefreshCw, Loader2 } from "lucide-react";
+import { RiPencilLine, RiDeleteBinLine, RiRefreshLine, RiLoader4Line } from "@remixicon/react";
 import { Button } from "@/components/ui/button";
 import { LinkButton } from "@/components/ui/link-button";
 import { Badge } from "@/components/ui/badge";
@@ -95,18 +95,18 @@ export function ReviewerDetail({ reviewer }: ReviewerDetailProps) {
             disabled={buildingPersona}
           >
             {buildingPersona ? (
-              <Loader2 className="h-3.5 w-3.5 mr-1.5 animate-spin" />
+              <RiLoader4Line className="h-3.5 w-3.5 mr-1.5 animate-spin" />
             ) : (
-              <RefreshCw className="h-3.5 w-3.5 mr-1.5" />
+              <RiRefreshLine className="h-3.5 w-3.5 mr-1.5" />
             )}
             Rebuild Persona
           </Button>
           <LinkButton href={`/reviewers/${reviewer.id}/edit`} variant="outline" size="sm">
-            <Pencil className="h-3.5 w-3.5 mr-1.5" />
+            <RiPencilLine className="h-3.5 w-3.5 mr-1.5" />
             Edit
           </LinkButton>
           <Button variant="ghost" size="sm" onClick={handleDelete} className="text-destructive hover:text-destructive">
-            <Trash2 className="h-3.5 w-3.5" />
+            <RiDeleteBinLine className="h-3.5 w-3.5" />
           </Button>
         </div>
       </div>

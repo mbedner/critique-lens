@@ -6,7 +6,7 @@ import { formatDistanceToNow } from "@/lib/date";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { ChevronRight, RefreshCw } from "lucide-react";
+import { RiArrowRightSLine, RiRefreshLine } from "@remixicon/react";
 import { easeOutExpo, springSnappy } from "@/components/ui/motion";
 import type { Reviewer } from "@/types";
 
@@ -54,7 +54,7 @@ export function ReviewerCard({ reviewer, index = 0 }: ReviewerCardProps) {
                 </div>
               </div>
               <div className="opacity-0 group-hover:opacity-100 transition-all duration-200 translate-x-[-4px] group-hover:translate-x-0">
-                <ChevronRight className="h-4 w-4 text-muted-foreground" />
+                <RiArrowRightSLine className="h-4 w-4 text-muted-foreground" />
               </div>
             </div>
           </CardHeader>
@@ -84,7 +84,7 @@ export function ReviewerCard({ reviewer, index = 0 }: ReviewerCardProps) {
             <div className="flex items-center gap-2 pt-1 text-[11px] text-muted-foreground">
               {reviewer.personaBuiltAt ? (
                 <>
-                  <RefreshCw className="h-3 w-3" />
+                  <RiRefreshLine className="h-3 w-3" />
                   <span>Persona updated {formatDistanceToNow(reviewer.personaBuiltAt)}</span>
                 </>
               ) : (

@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { SeverityBadge } from "@/components/shared/severity-badge";
-import { AlertTriangle, HelpCircle, FileText, CheckCircle } from "lucide-react";
+import { RiAlertLine, RiQuestionLine, RiFileTextLine, RiCheckboxCircleLine } from "@remixicon/react";
 import { cn } from "@/lib/utils";
 import { CountUp, FadeUp, easeOutExpo } from "@/components/ui/motion";
 import type { PreflightAnalysis } from "@/types";
@@ -117,7 +117,7 @@ export function AnalysisResults({ analysis, reviewerName, pbiTitle }: AnalysisRe
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2 text-sm font-semibold">
-                <AlertTriangle className="h-4 w-4 text-amber-500" />
+                <RiAlertLine className="h-4 w-4 text-amber-500" />
                 Predicted Concerns
                 <Badge variant="secondary" className="ml-auto text-xs font-medium">
                   {analysis.predictedConcerns.length}
@@ -157,7 +157,7 @@ export function AnalysisResults({ analysis, reviewerName, pbiTitle }: AnalysisRe
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2 text-sm font-semibold">
-                <HelpCircle className="h-4 w-4 text-[var(--violet)]" />
+                <RiQuestionLine className="h-4 w-4 text-[var(--violet)]" />
                 Likely Questions
               </CardTitle>
             </CardHeader>
@@ -187,7 +187,7 @@ export function AnalysisResults({ analysis, reviewerName, pbiTitle }: AnalysisRe
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2 text-sm font-semibold">
-                <FileText className="h-4 w-4 text-orange-500" />
+                <RiFileTextLine className="h-4 w-4 text-orange-500" />
                 Rationale Gaps
                 <span className="ml-1 text-xs font-normal text-muted-foreground">
                   — prepare before the review
@@ -225,7 +225,7 @@ export function AnalysisResults({ analysis, reviewerName, pbiTitle }: AnalysisRe
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.15 }}
               >
-                <CheckCircle className="h-10 w-10 text-emerald-500" />
+                <RiCheckboxCircleLine className="h-10 w-10 text-emerald-500" />
               </motion.div>
               <p className="text-sm font-semibold">No significant concerns detected</p>
               <p className="text-xs text-muted-foreground max-w-xs leading-relaxed">

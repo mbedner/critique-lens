@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Plus, Zap } from "lucide-react";
+import { RiAddLine, RiFlashlightLine } from "@remixicon/react";
 import { LinkButton } from "@/components/ui/link-button";
 import { PageHeader } from "@/components/layout/page-header";
 import { EmptyState } from "@/components/shared/empty-state";
@@ -38,7 +38,7 @@ export default async function PreflightPage() {
         description="Run a critique analysis before your next review"
         actions={
           <LinkButton href="/preflight/new" size="sm">
-            <Plus className="h-4 w-4 mr-1.5" />
+            <RiAddLine className="h-4 w-4 mr-1.5" />
             New Analysis
           </LinkButton>
         }
@@ -46,12 +46,12 @@ export default async function PreflightPage() {
       <PageShell className="p-6">
         {analyses.length === 0 ? (
           <EmptyState
-            icon={<Zap className="h-6 w-6 text-[var(--violet)]" />}
+            icon={<RiFlashlightLine className="h-6 w-6 text-[var(--violet)]" />}
             title="No analyses yet"
             description="Upload a frame and select a reviewer to run your first preflight critique."
             action={
               <LinkButton href="/preflight/new" size="sm">
-                <Plus className="h-4 w-4 mr-1.5" />
+                <RiAddLine className="h-4 w-4 mr-1.5" />
                 Run first analysis
               </LinkButton>
             }

@@ -5,7 +5,7 @@ import { formatDate } from "@/lib/date";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { SeverityBadge } from "@/components/shared/severity-badge";
-import { Image as ImageIcon } from "lucide-react";
+import { RiImageLine } from "@remixicon/react";
 import { easeOutExpo, springSnappy } from "@/components/ui/motion";
 import type { Critique } from "@/types";
 
@@ -44,7 +44,7 @@ export function CritiqueCard({ critique, reviewerName, projectName, index = 0 }:
               </Badge>
               {critique.imageUrl && (
                 <Badge variant="outline" className="gap-1 text-xs font-normal text-muted-foreground">
-                  <ImageIcon className="h-2.5 w-2.5" />
+                  <RiImageLine className="h-2.5 w-2.5" />
                   Screenshot
                 </Badge>
               )}

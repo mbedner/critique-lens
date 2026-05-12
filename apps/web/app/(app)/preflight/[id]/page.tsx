@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Plus } from "lucide-react";
+import { RiArrowLeftLine, RiAddLine } from "@remixicon/react";
 import { LinkButton } from "@/components/ui/link-button";
 import { PageHeader } from "@/components/layout/page-header";
 import { AnalysisResults } from "@/components/preflight/analysis-results";
@@ -23,7 +23,7 @@ export default async function PreflightResultPage({ params }: { params: Promise<
         description="Preflight critique results"
         actions={
           <LinkButton href="/preflight/new" size="sm" variant="outline">
-            <Plus className="h-4 w-4 mr-1.5" />
+            <RiAddLine className="h-4 w-4 mr-1.5" />
             New Analysis
           </LinkButton>
         }
@@ -34,7 +34,7 @@ export default async function PreflightResultPage({ params }: { params: Promise<
             href="/preflight"
             className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
           >
-            <ArrowLeft className="h-3 w-3" />
+            <RiArrowLeftLine className="h-3 w-3" />
             All analyses
           </Link>
 

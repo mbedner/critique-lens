@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { Upload, X, Image as ImageIcon } from "lucide-react";
+import { RiUploadLine, RiCloseLine, RiImageLine } from "@remixicon/react";
 import {
   Form,
   FormControl,
@@ -151,7 +151,7 @@ export function CritiqueForm({ reviewers, projects, pbis }: CritiqueFormProps) {
                   onClick={() => { setImageFile(null); setImagePreview(null); }}
                   className="absolute -right-2 -top-2 rounded-full bg-background border p-0.5 shadow-sm hover:bg-muted"
                 >
-                  <X className="h-3 w-3" />
+                  <RiCloseLine className="h-3 w-3" />
                 </button>
               </div>
             ) : (
@@ -164,7 +164,7 @@ export function CritiqueForm({ reviewers, projects, pbis }: CritiqueFormProps) {
                 onDragLeave={() => setDragOver(false)}
                 onDrop={handleImageDrop}
               >
-                <Upload className="h-5 w-5 text-muted-foreground" />
+                <RiUploadLine className="h-5 w-5 text-muted-foreground" />
                 <span className="text-sm text-muted-foreground">
                   Drag & drop or <span className="text-foreground underline underline-offset-2">browse</span>
                 </span>

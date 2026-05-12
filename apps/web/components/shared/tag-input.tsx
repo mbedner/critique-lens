@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, KeyboardEvent } from "react";
-import { X } from "lucide-react";
+import { RiCloseLine } from "@remixicon/react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
@@ -47,7 +47,7 @@ export function TagInput({ value, onChange, placeholder = "Add tag…", classNam
             onClick={() => removeTag(tag)}
             className="rounded-full hover:bg-muted-foreground/20 p-0.5"
           >
-            <X className="h-2.5 w-2.5" />
+            <RiCloseLine className="h-2.5 w-2.5" />
           </button>
         </Badge>
       ))}

@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Search, Loader2 } from "lucide-react";
+import { RiSearchLine, RiLoader4Line } from "@remixicon/react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -28,7 +28,7 @@ export function CritiqueSearch() {
   return (
     <form onSubmit={handleSearch} className="flex items-center gap-2">
       <div className="relative">
-        <Search className="absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
+        <RiSearchLine className="absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
         <Input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -37,7 +37,7 @@ export function CritiqueSearch() {
         />
       </div>
       <Button type="submit" size="sm" variant="outline" disabled={isPending} className="h-8">
-        {isPending ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : "Search"}
+        {isPending ? <RiLoader4Line className="h-3.5 w-3.5 animate-spin" /> : "Search"}
       </Button>
     </form>
   );

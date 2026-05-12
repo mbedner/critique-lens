@@ -1,4 +1,4 @@
-import { Plus, MessageSquare } from "lucide-react";
+import { RiAddLine, RiChatQuoteLine } from "@remixicon/react";
 import { LinkButton } from "@/components/ui/link-button";
 import { PageHeader } from "@/components/layout/page-header";
 import { CritiqueCard } from "@/components/critiques/critique-card";
@@ -29,7 +29,7 @@ export default async function CritiquesPage({
           <div className="flex items-center gap-2">
             <CritiqueSearch />
             <LinkButton href="/critiques/new" size="sm">
-              <Plus className="h-4 w-4 mr-1.5" />
+              <RiAddLine className="h-4 w-4 mr-1.5" />
               Add Critique
             </LinkButton>
           </div>
@@ -43,7 +43,7 @@ export default async function CritiquesPage({
         )}
         {critiques.length === 0 ? (
           <EmptyState
-            icon={<MessageSquare className="h-6 w-6 text-[var(--violet)]" />}
+            icon={<RiChatQuoteLine className="h-6 w-6 text-[var(--violet)]" />}
             title={q ? "No critiques found" : "No critiques yet"}
             description={
               q
@@ -53,7 +53,7 @@ export default async function CritiquesPage({
             action={
               !q ? (
                 <LinkButton href="/critiques/new" size="sm">
-                  <Plus className="h-4 w-4 mr-1.5" />
+                  <RiAddLine className="h-4 w-4 mr-1.5" />
                   Add first critique
                 </LinkButton>
               ) : undefined

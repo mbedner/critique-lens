@@ -3,7 +3,7 @@
 import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { Upload, X, Loader2, Zap } from "lucide-react";
+import { RiUploadLine, RiCloseLine, RiLoader4Line, RiFlashlightLine } from "@remixicon/react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -98,7 +98,7 @@ export function PreflightForm({ reviewers, projects, pbis }: PreflightFormProps)
               onClick={() => { setImageFile(null); setImagePreview(null); }}
               className="absolute right-2 top-2 rounded-full bg-background border p-1 shadow-sm hover:bg-muted"
             >
-              <X className="h-3.5 w-3.5" />
+              <RiCloseLine className="h-3.5 w-3.5" />
             </button>
           </div>
         ) : (
@@ -111,7 +111,7 @@ export function PreflightForm({ reviewers, projects, pbis }: PreflightFormProps)
             onDragLeave={() => setDragOver(false)}
             onDrop={handleImageDrop}
           >
-            <Upload className="h-6 w-6 text-muted-foreground" />
+            <RiUploadLine className="h-6 w-6 text-muted-foreground" />
             <div>
               <p className="text-sm font-medium">Drop a frame screenshot here</p>
               <p className="text-xs text-muted-foreground mt-1">
@@ -200,12 +200,12 @@ export function PreflightForm({ reviewers, projects, pbis }: PreflightFormProps)
       <Button type="submit" disabled={loading} size="lg" className="w-full sm:w-auto">
         {loading ? (
           <>
-            <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+            <RiLoader4Line className="h-4 w-4 mr-2 animate-spin" />
             Analyzing…
           </>
         ) : (
           <>
-            <Zap className="h-4 w-4 mr-2" />
+            <RiFlashlightLine className="h-4 w-4 mr-2" />
             Run Preflight Critique
           </>
         )}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Plus, FolderOpen } from "lucide-react";
+import { RiAddLine, RiFolderOpenLine } from "@remixicon/react";
 import { LinkButton } from "@/components/ui/link-button";
 import { PageHeader } from "@/components/layout/page-header";
 import { EmptyState } from "@/components/shared/empty-state";
@@ -24,7 +24,7 @@ export default async function ProjectsPage() {
         description="Organize critiques and analyses by project and problem brief"
         actions={
           <LinkButton href="/projects/new" size="sm">
-            <Plus className="h-4 w-4 mr-1.5" />
+            <RiAddLine className="h-4 w-4 mr-1.5" />
             New Project
           </LinkButton>
         }
@@ -32,12 +32,12 @@ export default async function ProjectsPage() {
       <PageShell className="p-6">
         {projects.length === 0 ? (
           <EmptyState
-            icon={<FolderOpen className="h-6 w-6 text-[var(--violet)]" />}
+            icon={<RiFolderOpenLine className="h-6 w-6 text-[var(--violet)]" />}
             title="No projects yet"
             description="Create projects to organize critiques and PBIs for preflight analysis."
             action={
               <LinkButton href="/projects/new" size="sm">
-                <Plus className="h-4 w-4 mr-1.5" />
+                <RiAddLine className="h-4 w-4 mr-1.5" />
                 Add first project
               </LinkButton>
             }
@@ -67,7 +67,7 @@ export default async function ProjectsPage() {
                             variant="outline"
                             className="h-7 text-xs"
                           >
-                            <Plus className="h-3 w-3 mr-1" />
+                            <RiAddLine className="h-3 w-3 mr-1" />
                             Add PBI
                           </LinkButton>
                         </div>

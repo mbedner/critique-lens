@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Users, MessageSquare, Zap, FolderOpen } from "lucide-react";
+import { RiGroupLine, RiChatQuoteLine, RiFlashlightLine, RiFolderOpenLine } from "@remixicon/react";
 import { motion } from "framer-motion";
 import {
   Sidebar,
@@ -19,10 +19,10 @@ import {
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { href: "/reviewers", label: "Reviewers", icon: Users },
-  { href: "/critiques", label: "Critique Memory", icon: MessageSquare },
-  { href: "/preflight", label: "Preflight", icon: Zap },
-  { href: "/projects", label: "Projects & PBIs", icon: FolderOpen },
+  { href: "/reviewers", label: "Reviewers", icon: RiGroupLine },
+  { href: "/critiques", label: "Critique Memory", icon: RiChatQuoteLine },
+  { href: "/preflight", label: "Preflight", icon: RiFlashlightLine },
+  { href: "/projects", label: "Projects & PBIs", icon: RiFolderOpenLine },
 ];
 
 export function AppSidebar() {
@@ -38,7 +38,7 @@ export function AppSidebar() {
           className="flex items-center gap-3"
         >
           <div className="flex h-7 w-7 items-center justify-center rounded-md bg-white/10 ring-1 ring-white/10">
-            <Zap className="h-3.5 w-3.5 text-white" />
+            <RiFlashlightLine className="h-3.5 w-3.5 text-white" />
           </div>
           <span className="text-[13px] font-semibold tracking-tight text-white">
             Critique Lens
