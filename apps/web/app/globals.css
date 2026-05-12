@@ -49,6 +49,13 @@
   /* violet AI accent */
   --color-violet: var(--violet);
   --color-violet-light: var(--violet-light);
+
+  /* Scaled-up type system — everything reads at ~1 size larger */
+  --text-xs: 0.8125rem;    /* 13px  (was 12px) */
+  --text-sm: 0.9375rem;    /* 15px  (was 14px) */
+  --text-base: 1.0625rem;  /* 17px  (was 16px) */
+  --text-lg: 1.1875rem;    /* 19px  (was 18px) */
+  --text-xl: 1.3125rem;    /* 21px  (was 20px) */
 }
 
 :root {
@@ -58,8 +65,8 @@
   --card-foreground: oklch(0.1 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.1 0 0);
-  --primary: oklch(0.13 0.005 265);
-  --primary-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.54 0.22 275);
+  --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.96 0.004 260);
   --secondary-foreground: oklch(0.2 0 0);
   --muted: oklch(0.96 0.004 260);
@@ -98,8 +105,8 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+  --primary: oklch(0.62 0.22 275);
+  --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
