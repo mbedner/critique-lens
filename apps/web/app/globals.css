@@ -185,8 +185,7 @@
   transform: translateY(-1px);
 }
 
-/* Focus ring — subtle violet */
+/* Focus rings handled per-component via Tailwind ring utilities */
 :focus-visible {
-  outline: 1.5px solid oklch(0.58 0.22 275 / 0.35);
-  outline-offset: 2px;
+  outline: none;
 }
